@@ -13,8 +13,9 @@ struct LoginView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {Spacer()
-                Image(systemName: "ellipsis.message.fill")
+            VStack {
+                Spacer()
+                Image("message")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150, height: 150)
@@ -82,8 +83,11 @@ struct LoginView: View {
                 
                 Spacer()
                 
+                Divider()
+                
                 NavigationLink {
-                    Text("Lets viuw")
+                   RegistrationView()
+                        .navigationBarBackButtonHidden()
                 } label:  {
                     Text("Não possui uma conta?")
                     Text("Criar conta")
